@@ -1,6 +1,6 @@
 import { Personagem } from "./personagem.js"
 
-export class mago extends Personagem{
+export class Mago extends Personagem{
     elementoMagico
     levelMagico
     inteligencia

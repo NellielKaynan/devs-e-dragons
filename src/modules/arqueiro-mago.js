@@ -1,9 +1,11 @@
 import { Personagem } from "./personagem.js";
+import { Arqueiro } from "./arqueiro.js";
+import { Mago } from "./mago.js";
 
 export class ArqueiroMago extends Personagem {
     ladoArqueiro
     ladoMago
-    tiop = 'ArqueiroMago'
+    tipo = 'ArqueiroMago'
 
     constructor (nome, level, destreza, elementoMagico, LevelMagico, inteligencia) {
         super(nome, level)
@@ -12,6 +14,6 @@ export class ArqueiroMago extends Personagem {
     }
 
     obterInsignia() {
-        return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago. obterInsignia}`
+        return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`
     }
 }

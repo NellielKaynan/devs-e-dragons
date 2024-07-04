@@ -1,6 +1,6 @@
 import { Personagem } from "./personagem.js"
 
-export class arqueiro extends Personagem {
+export class Arqueiro extends Personagem {
     tipo = 'Arqueiro'
     destreza
 
