@@ -3,6 +3,7 @@ import { PersonagemView } from "./components/personagem-view.js"
 import { Mago } from "./modules/mago.js"
 import { Arqueiro } from "./modules/arqueiro.js"
 import { ArqueiroMago } from "./modules/arqueiro-mago.js"
+import { Personagem } from "./modules/personagem.js"
 
 const magoMerlin = new Mago ('Merlin', 8, 'Fogo', 8, 10)
 const magaFelicia = new Mago ('Felicia', 3, 'Gelo', 5, 6)
@@ -14,4 +15,5 @@ const personagens = [magoMerlin, magaFelicia, arqueiroHobbin, ArqueiroMagoNellie
 
 new PersonagemView(personagens).render()
 
+console.log(Personagem.verificarVencedor(arqueiroHobbin, magoMerlin))
 

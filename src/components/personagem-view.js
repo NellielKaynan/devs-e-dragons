@@ -1,9 +1,12 @@
 export class PersonagemView {
     personagens
+    personagensSelecionados
     
     constructor(personagens) {
         this.ulPersonagens = document.querySelector('ul#personagens')
         this.personagens = personagens  
+        this.personagensSelecionados = [];
+        this.escutarEventoDuelo()
     }
     
     render() {
@@ -44,7 +47,7 @@ export class PersonagemView {
                 <h3 class="nome">${personagem.nome}</h3>
             </div>
             <div class="container-descricao">
-                <p class="descricao"></p>
+                <p class="descricao">${ personagem.constructor.descricao }</p>
             </div>
         </div>
         <div class="container-inferior">
@@ -83,7 +86,7 @@ export class PersonagemView {
     }
     
     
-    /*adicionaSelecao = (personagem) => {
+    adicionaSelecao = (personagem) => {
         this.personagensSelecionados.push(personagem)
         this.render()
     }
@@ -109,6 +112,6 @@ export class PersonagemView {
     
             this.render()
         })
-    }*/
+    }
 }
 
